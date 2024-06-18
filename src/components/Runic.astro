@@ -1,0 +1,77 @@
+---
+
+---
+
+<script>
+  let textFields = document.querySelectorAll(".text-field");
+  let field1 = textFields[0] as HTMLInputElement;
+  let field2 = textFields[1] as HTMLInputElement;
+  let mapTR = {
+    "𐰀": "a",
+    "𐰂": "ä",
+    "𐰃": "ı",
+    "𐰄": "i",
+    "𐰅": "e",
+    "𐰆": "o",
+    "⧼": "ö",
+    "𐰋": "b",
+    "𐰲": "ç",
+    "𐰓": "d",
+    "𐰏": "g",
+    "𐰠": "l",
+    "𐰙": "j",
+    "𐰍": "y",
+    "𐰜": "k",
+    "𐰸": "q",
+    "𐰢": "m",
+    "𐰣": "n",
+    "𐰭": "ng",
+    "𐰨": "nç",
+    "𐰪": "ny",
+    "𐰧": "nt",
+    "𐰔": "z",
+    "𐰼": "r",
+    "𐰯": "p",
+    "𐱁": "ş",
+    "𐱃": "t",
+  };
+
+  field1.addEventListener("input", function () {
+    let text = field1.value;
+    let newText = "";
+    for (let i = 0; i < text.length; i++) {
+      let char = text[i];
+      if (mapTR[char]) {
+        newText += mapTR[char];
+      } else {
+        newText += char;
+      }
+    }
+    field2.value = newText;
+  });
+
+  field2.addEventListener("input", function () {
+    let text = field2.value;
+    let newText = "";
+    for (let i = 0; i < text.length; i++) {
+      let char = text[i];
+      let found = false;
+      for (let key in mapTR) {
+        if (mapTR[key] === char) {
+          newText += key;
+          found = true;
+          break;
+        }
+      }
+      if (!found) {
+        newText += char;
+      }
+    }
+    field1.value = newText;
+  });
+</script>
+
+<div class="container">
+  <input type="text" id="1" class="text-field" />
+  <input type="text" id="2" class="text-field" />
+</div>

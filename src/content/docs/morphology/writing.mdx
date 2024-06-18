@@ -3,3 +3,292 @@ title: Writing System
 description: the Orkon based Writing system (script) of M.S.T
 ---
 
+import Runic from '../../../components/Runic.astro'
+
+The Orkhon Script is a script used to write the [Orkhon Inscriptions](https://tonga.onrir.dev/writings/orhun/) and the [Yenisean Inscriptions](https://tonga.onrir.dev/writings/yenisey/).
+
+The original script is written left to write and is in form of a syllabary. Some letters represent the words those letters sound out. Like this letter, "ok" (meaing arrow) being a literal arrow <kbd>𐰸</kbd> or this letter reading "at" (meaning to shoot/throw) depicts an arrow being shot <kbd>𐱃</kbd>. While however cool this may be it is not a unified approach as a single letter can be read as a lot of things. To continue with our examples, the letter <kbd>𐰚</kbd> (ek) could be any of the following; ek, ke, ik, ki. 
+
+While I believe the script itself can be considered cool, I see it of no benefit to include this sort of ambiguity in a modern script. So I have decided to make a few changes to the script.
+
+## Modern Turkic Script
+
+The modern Turkic script is written left to right to fit the modernity of our era better and to not run in to technical issues like the ones I did while preparing this website. The script is also written in a way that each letter represents a single sound. This way the script is more of an alphabet than a semi-syllabary which it used to be.
+
+The writing <kbd>𐱅𐰇𐰼𐰜</kbd> now represents a clear one letter at a time system sounding out "TÜRK"
+
+However this arises a new challenge. The letters for some sounds are the same and some non-existant.
+
+### Vowels
+
+For the vowel sounds, while none were missing, some were sharing the same letter. <kbd>𐰀</kbd> : a, ä <kbd>𐰃</kbd> : ı, i<kbd>𐰆</kbd> : o, u <kbd>𐰇</kbd> : ö, ü. Sınce I wanted to prevent adding new/made up letters as much as possible I fixated on using the Yeniseian variants for some of these sounds.
+    
+Sadly, Yenisean does not have a different symbol for <kbd>𐰆</kbd> marking both o and u so instead I reversed it, found a unicode chracter that looked like it being reversed which was <kbd>⧼</kbd> (	
+Left-pointing curved angle bracket) and use that in its stead.
+
+## Tables
+<table>
+  <tr>
+    <td>Letter</td>
+    <td>Sound</td>
+    <td>IPA</td>
+    <td>Unicode</td>
+  </tr>
+  <tr>
+    <td><kbd  class="k">𐰀</kbd></td>
+    <td>a</td>
+    <td>/a/</td>
+    <td>U+10C00</td>	
+  </tr>
+  <tr>
+    <td><kbd  class="k">𐰂</kbd></td>
+    <td>ä</td>
+    <td>/æ/</td>
+    <td>U+10C02</td>
+  </tr>
+  <tr>
+    <td><kbd  class="k">𐰃</kbd></td>
+    <td>ı</td>
+    <td>/ɯ/</td>
+    <td>U+10C03</td>
+  </tr>
+  <tr>
+    <td><kbd  class="k">𐰄</kbd></td>
+    <td>i</td>
+    <td>/i/</td>
+    <td>U+10C04</td>
+  </tr>
+  <tr>
+    <td><kbd  class="k">𐰅</kbd></td>
+    <td>e</td>
+    <td>/e/</td>
+    <td>U+10C05</td>
+  </tr>
+  <tr>
+    <td><kbd  class="k">𐰆</kbd></td>
+    <td>o</td>
+    <td>/o/</td>
+    <td>U+10C06</td>
+  </tr>
+  <tr>
+    <td><kbd  class="k">⧼</kbd></td>
+    <td>ö</td>
+    <td>/ø/</td>
+    <td>U+29FC</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>Letter</td>
+    <td>Sound</td>
+    <td>IPA</td>
+    <td>Unicode</td>
+    <td></td>
+    <td>Letter</td>
+    <td>Sound</td>
+    <td>IPA</td>
+    <td>Unicode</td>
+  </tr>
+
+  <tr>
+    <td><kbd  class="k">𐰋</kbd></td>
+    <td>b</td>
+    <td>/b/</td>
+    <td>U+10C0B</td>
+    <td></td>
+    <td><kbd  class="k">𐰯</kbd></td>
+    <td>p</td>
+    <td>/p/</td>
+    <td>U+10C2F</td>
+  </tr>
+
+  <tr>
+    <td><kbd  class="k">𐰲</kbd></td>
+    <td>ç</td>
+    <td>/t͡ʃ/</td>
+    <td>U+10C32</td>
+    <td></td>
+    <td><kbd  class="k">𐰼</kbd></td>
+    <td>r</td>
+    <td>/r/</td>
+    <td>U+10C3C</td>
+  </tr>
+
+  <tr>
+    <td><kbd  class="k">𐰓</kbd></td>
+    <td>d</td>
+    <td>/d/</td>
+    <td>U+10C13</td>
+    <td></td>
+    <td><kbd  class="k">𐰾</kbd></td>
+    <td>s</td>
+    <td>/s/</td>
+    <td>U+10C3E</td>
+  </tr>
+
+  <tr>
+    <td><kbd  class="k">𐰏</kbd></td>  
+    <td>g</td>
+    <td>/g/</td>
+    <td>U+10C0F</td>
+    <td></td>
+    <td><kbd  class="k">𐱁</kbd></td>
+    <td>ş</td>
+    <td>/ʃ/</td>
+    <td>U+10C41</td>
+  </tr>
+
+  <tr>
+    <td><kbd  class="k">𐰠</kbd></td>
+    <td>l</td>
+    <td>/l/</td>
+    <td>U+10C20</td>
+    <td></td>
+    <td><kbd  class="k">𐱃</kbd></td>
+    <td>t</td>
+    <td>/t/</td>
+    <td>U+10C43</td>
+  </tr>
+
+  <tr>
+    <td><kbd  class="k">𐰙</kbd></td>
+    <td>j</td>
+    <td>/d͡ʒ/</td>
+    <td>U+10C19</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td><kbd  class="k">𐰍</kbd></td>
+    <td>y</td>
+    <td>/j/</td>
+    <td>U+10C0D</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td><kbd  class="k">𐰜</kbd></td>
+    <td>k</td>
+    <td>/k/</td>
+    <td>U+10C1C</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td><kbd  class="k">𐰸</kbd></td>
+    <td>q</td>
+    <td>/q/</td>
+    <td>U+10C38</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td><kbd  class="k">𐰢</kbd></td>
+    <td>m</td>
+    <td>/m/</td>
+    <td>U+10C22</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td><kbd  class="k">𐰣</kbd></td>
+    <td>n</td>
+    <td>/n/</td>
+    <td>U+10C23</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+
+### Special Consonants
+
+/z/ <kbd>𐰔</kbd>  is special as its not natively featured in Turkic
+
+<table>
+  <tr>
+    <td>Letter</td>
+    <td>Sound</td>
+    <td>IPA</td>
+    <td>Unicode</td>
+    <td></td>
+    <td>Letter</td>
+    <td>Sound</td>
+    <td>IPA</td>
+    <td>Unicode</td>
+  </tr>
+
+  <tr>
+    <td><kbd  class="k">𐰭</kbd></td>
+    <td>ng</td>
+    <td>/ŋ/</td>
+    <td>U+10C2D</td>
+    <td></td>
+    <td><kbd  class="k">𐰡</kbd></td>
+    <td>lt</td>
+    <td>/lt/</td>
+    <td>U+10C21</td>
+  </tr>
+  <tr>
+    <td><kbd  class="k">𐰨</kbd></td>
+    <td>nç</td>
+    <td>/n̩t͡ʃ/</td>
+    <td>U+10C28</td>
+    <td></td>
+    <td><kbd  class="k">𐰔</kbd></td>
+    <td>z</td>
+    <td>/z/</td>
+    <td>U+10C14</td>
+  </tr>
+
+  <tr>
+    <td><kbd  class="k">𐰪</kbd></td>
+    <td>ny</td>
+    <td>/ɲ/</td>
+    <td>U+10C2A</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><kbd  class="k">𐰧</kbd></td>
+    <td>nt</td>
+    <td>/nt/</td>
+    <td>U+10C27</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+
+## <h1>Runic Convertor</h1>
+
+<Runic/>
+

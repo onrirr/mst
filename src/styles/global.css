@@ -29,3 +29,20 @@
   --sl-color-gray-7: #f6f6f6;
   --sl-color-black: #ffffff;
 }
+
+kbd {
+  background-color: var(--sl-color-gray-1);
+  border-radius: 0.25rem;
+  color: var(--sl-color-gray-6);
+  font-family: var(--sl-font-monospace);
+  padding: 0.1rem 0.3rem;
+}
+
+kbd[data-theme="light"] {
+  background-color: var(--sl-color-gray-6);
+  color: var(--sl-color-gray-1);
+}
+
+.k {
+  font-size: 28px;
+}
