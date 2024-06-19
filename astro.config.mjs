@@ -18,7 +18,12 @@ export default defineConfig({
       sidebar: [
         {
           label: "Morphology",
-          autogenerate: { directory: "morphology" },
+          items: [
+            {
+              label: "Writing Systems",
+              autogenerate: { directory: "morphology/writing" },
+            },
+          ],
         },
         {
           label: "Dictionary",
