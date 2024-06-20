@@ -6,30 +6,30 @@ import starlightUtils from "@lorenzo_lewis/starlight-utils";
 export default defineConfig({
   integrations: [
     starlight({
-      plugins: [
-        starlightUtils({
-          multiSidebar: {
-            switcherStyle: "horizontalList",
-          },
-        }),
-      ],
-      title: "Modern Standart Turkic",
+      // plugins: [
+      //   starlightUtils({
+      //     multiSidebar: {
+      //       switcherStyle: "horizontalList",
+      //     },
+      //   }),
+      // ],
+      title: "Türkoluş",
+      defaultLocale: "tr",
+
+      locales: {
+        tr: {
+          label: "Türkçe",
+          direction: "ltr",
+          lang: "tr",
+        },
+        uz: {
+          label: "O'zbek",
+          direction: "ltr",
+          lang: "uz",
+        },
+      },
       customCss: ["./src/styles/global.css"],
-      sidebar: [
-        {
-          label: "Morphology",
-          items: [
-            {
-              label: "Writing Systems",
-              autogenerate: { directory: "morphology/writing" },
-            },
-          ],
-        },
-        {
-          label: "Dictionary",
-          autogenerate: { directory: "dictionary" },
-        },
-      ],
+      sidebar: [],
     }),
   ],
 });
