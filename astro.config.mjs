@@ -4,16 +4,20 @@ import starlightUtils from "@lorenzo_lewis/starlight-utils";
 
 // https://astro.build/config
 export default defineConfig({
+  
+  site: 'https://onrirr.github.io/',
+  base: 'tuvgan',
   integrations: [
     starlight({
-      // plugins: [
-      //   starlightUtils({
-      //     multiSidebar: {
-      //       switcherStyle: "horizontalList",
-      //     },
-      //   }),
-      // ],
-      title: "Türkoluş",
+
+      plugins: [
+        starlightUtils({
+          multiSidebar: {
+            switcherStyle: "horizontalList",
+          },
+        }),
+      ],
+      title: "Tuvgan Sözlük",
       defaultLocale: "tr",
 
       locales: {
@@ -22,14 +26,19 @@ export default defineConfig({
           direction: "ltr",
           lang: "tr",
         },
-        uz: {
-          label: "O'zbek",
-          direction: "ltr",
-          lang: "uz",
-        },
       },
       customCss: ["./src/styles/global.css"],
-      sidebar: [],
+      sidebar: [
+        {
+          label: "Dictionary",
+          autogenerate: { directory: "./dict/" },
+          translations: {
+            en: "Dictionary",
+            tr: "Sözlük",
+            uz: "Lug'at",
+          },
+        },
+      ],
     }),
   ],
 });
